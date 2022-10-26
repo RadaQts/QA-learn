@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      
+    System.out.println ("Задача 4.9.3");
+    /* Дано двузначное число. Определить:
+    1. является ли сумма его цифр двузначным числом
+    2. больше ли самого числа сумма его цифр*/
+    
+    System.out.println ("Введите двузначное число");
+    Scanner sc = new Scanner(System.in);
+    int number = sc.nextInt();
+    
+    int s = number/10+number%10;
+    System.out.println ("Сумма цифр = " + s);
+    
+    boolean result1 = (s>9)&&(s<100);
+    System.out.println ("Сумма цифр двузначное число? " + result1);
+    
+    boolean result2 = s>number;
+    System.out.println ("Сумма цифр больше числа? " + result2);
+
+   System.out.println ();
+   System.out.println ("Задача 4.9.4");
+    /* Даны два числа.
+    Если квадратный корень из второго числа меньше первого числа, то
+    увеличить второе число в 5 раз*/
+    
+    System.out.println ("Введите два числа");
+    
+    double x1 = sc.nextDouble();
+    double x2 = sc.nextDouble();
+    System.out.printf ("x1 = %f, x2 = %f\n", x1, x2);
+    
+    if (Math.sqrt(x2)<x1) {
+      x2=x2*5;
+      System.out.println ("условие выполнено, произвожу расчет");
+      System.out.printf ("x1 = %f, x2 = %f\n", x1, x2);
+    }
+    else {
+      System.out.println ("условие не выполнено");
+    }
+   
+    System.out.println ();
+    System.out.println ("Задача 4.9.5");
+    /* Даны три вещественных числа a,b и с. Проверить:
+    1. Выполняется ли неравенство a<b<c
+    2. Выполняется ли неравенство b>a>c */
+    
+    System.out.println ("Введите a,b,c");
+    
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    int c = sc.nextInt();
+    
+    System.out.printf ("a = %d, b = %d, c = %d,\n", a, b,c);
+    
+    boolean res1 = (a<b)&&(b<c);
+    System.out.println ("a<b<c выполнено? " + res1);
+   
+    boolean res2 = (a<b)&&(a>c);
+    System.out.println ("b>a>c выполнено? " + res2);
+}
+}
