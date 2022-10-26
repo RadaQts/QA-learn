@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) {
       
       System.out.println("Задача 4.2");
+      /* Задача 4.2 Известно значение температуры по шкале Цельсия 36,6.
+      Найти соответствующе значение температуры по шкале Фаренгейта и Кельвина*/
       System.out.println("Введите значение температуры по шкале Цельсия");
       
       Scanner vvod = new Scanner (System.in);
@@ -13,3 +15,40 @@ public class Main {
       System.out.println("По Фаренгейту: " + (celsius*1.8+32));
       System.out.println("По Кельвину: " + (celsius+273.15));
       
+      System.out.println();
+      System.out.println("Задача 4.4");
+      /* Задача 4.4 Известны площади круга и квадрата. Определить:
+      1. Уместится ли круг в квадрате
+      2. Уместится ли квадрат в круге*/
+      System.out.println("Введите значение площади круга");
+      System.out.println("Введите значение площади квадрата");
+      
+      double circleArea = vvod.nextDouble();
+      double squareArea = vvod.nextDouble();
+      
+      System.out.println("Площадь круга: " + circleArea);
+      System.out.println("Площадь квадрата: " + squareArea);
+      
+      double diam=2*Math.sqrt(circleArea/Math.PI);
+      double a=Math.sqrt(squareArea);
+      double diag=a*Math.sqrt(2);
+      
+      System.out.println("Диаметр круга: " + diam);
+      System.out.println("Длина стороны квадрата: " + a);
+      System.out.println("Диагональ квадрата: " + diag);
+      
+      if (a<diam) {
+        System.out.println("Круг не уместится в квадрате");
+      }
+      else { 
+        System.out.println("Круг уместится в квадрате");
+      }
+      
+       if (diam<diag) {
+        System.out.println("Квадрат не уместится в круге");
+      }
+      else { 
+        System.out.println("Квадрат уместится в круге");
+      }
+  }
+}
