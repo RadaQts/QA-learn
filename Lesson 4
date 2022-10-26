@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      System.out.println("Задача 4.2");
+      System.out.println("Введите значение температуры по шкале Цельсия");
+      
+      Scanner vvod = new Scanner (System.in);
+      double celsius = vvod.nextDouble();
+      
+      System.out.println("По Цельсию: " + celsius);
+      System.out.println("По Фаренгейту: " + (celsius*1.8+32));
+      System.out.println("По Кельвину: " + (celsius+273.15));
+      
