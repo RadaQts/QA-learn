@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      
+    System.out.println ("Задача 4.9.1");
+    /* В чемпионате по футболу команде за выигрыш дается 3 очка, за проигрыш
+    0, за ничью 1. Известно количество очков, полученных командой за игру.
+    Определить словесный результат игры (выигрыш, проигрыш ил ничья)*/
+    
+     System.out.println ("Введите результат команды (0,1 или 3)");
+     Scanner sc = new Scanner (System.in);
+     int result = sc.nextInt();
+     
+     if (result==0){
+      System.out.println ("проигрыш");
+     }
+     
+     if (result==1){
+      System.out.println ("ничья");
+     }
+     
+     if (result==3){
+      System.out.println ("выигрыш");
+     }
+     else {
+       System.out.println ("Результат введен неверно");
+     }
+     
+    System.out.println ();
+    System.out.println ("Задача 4.9.2");
+       /*Даны радиус круга и сторона квадрата.
+       У какой фигуры пощадь больше?*/
+    
+     System.out.println ("Введите радиус круга (r)");
+     System.out.println ("Введите сторону квадрата (a)");
+    
+     double r = sc.nextDouble();
+     double a = sc.nextDouble();
+     
+     double cA = Math.PI*Math.pow(2,r);     // площадь круга
+     double sA = a*a;                     // площадь квдрата
+     System.out.println ("Площадь круга = " + cA);
+     System.out.println ("Площадь квадрата = " + sA);
+     
+     if (cA>sA){
+      System.out.println ("Площадь круга больше");
+     }
+     else {
+       if (cA<sA){
+       System.out.println ("Площадь квадрата больше");
+       }
+       else {
+       System.out.println ("Площади равны");
+       }
+     }
+}
+}
