@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args)
+    
+    {
+      System.out.println("Задача 1");
+      int a=234;
+      System.out.println("Прошло "+a+" дней.");
+      System.out.println("   Это составит:");
+      int b=a/7;
+      System.out.println("   "+b+" недель, или");
+      int c=a/30;
+      System.out.println("   "+c+" месяцев.");
+      
+      System.out.println();
+      System.out.println("Задача 2");
+      int n=39;
+      System.out.println("Дано число "+n+".");
+      System.out.println("   В нём:");
+      int m=n/10;
+      System.out.print("   "+m+" десятков и");
+      int k=n%10;
+      System.out.println(" "+k+" единиц.");
+      System.out.println("   Сумма его цифр равна "+(m+k));
+      System.out.println("   Произведение его цифр равно "+m*k);}}
+      
