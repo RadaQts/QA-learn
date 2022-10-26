@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      System.out.println("Задача 4.7");
+      /* Задача 4.7 Известен вес боксера-любителя. Отнести этот вес к одной из категорий:
+      1. Легкий вес до 60 кг
+      2. Средний вес до 75 кг 
+      3. Тяжелый вес до 91 кг
+      4. Супертяжелый вес с 91 кг*/
+      
+      System.out.println("Введите вес боксера");
+      
+      Scanner sc = new Scanner (System.in);
+      double weight = sc.nextDouble();
+      System.out.println("Вес боксера: " + weight);
+      /* вариант по блок-схеме 1, равноценно 2*/
+      if (weight<60){
+       System.out.println("Легкий вес"); 
+      }
+      else { 
+          if (weight<75){
+            System.out.println("Средний вес"); 
+          }
+          else {
+             if (weight<91){
+             System.out.println("Тяжелый вес"); 
+            }
+             else {
+              System.out.println("Супертяжелый вес"); 
+          }}}
+          
+      /* вариант по блок-схеме 3*/
+      if (weight>=75){
+         if (weight>=91){
+          System.out.println("Супертяжелый вес"); 
+         }
+         else { 
+            System.out.println("Тяжелый вес"); 
+           }}
+      else {
+          if (weight>=60){
+          System.out.println("Средний вес"); 
+          }
+          else {
+          System.out.println("Легкий вес"); 
+          }}
+  }
+}
