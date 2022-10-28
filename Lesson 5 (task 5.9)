@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
       
-    System.out.println ("Задача 5.9");
+   System.out.println ("Задача 5.9");
     /* Обеспечить вывод на экран "столбиком" всех целых чисел от 10 до 30.
     1. В виде оператора цикла с предусловием
     2. В виде оператора цикла с постусловием*/
@@ -23,3 +23,44 @@ public class Main {
       j++;
     }
     while (j<30);
+    
+    System.out.println ("Задача 5.10");
+    /* Дано натуральное число.
+    1. Определить его максимальную цифру
+    2. Определить его минимальную цифру*/
+       
+    int number = 915283;
+    int originalNumber = number;
+    
+    /*max*/
+    int max=0;
+    int number1 = number;
+    while (number1 !=0) {
+      int lastDigit = number1 % 10;
+      if (lastDigit > max) {
+        max = lastDigit;
+      }
+      if (max==9) {
+        break;
+      }
+    number1 = number1/10;
+    }
+    System.out.printf ("Максимальная цифра числа %d - %d\n", originalNumber, max);
+    
+    /*min*/
+    int min=9;
+    int number2 = number;
+    
+    while (number2 !=0) {
+      int lastDigit = number2 % 10;
+      if (lastDigit < min) {
+        min = lastDigit;
+      }
+      if (min==0) {
+        break;
+      }
+    number2 = number2/10;
+    }
+    System.out.printf ("Минимальная цифра числа %d - %d", originalNumber, min);
+  }
+}
