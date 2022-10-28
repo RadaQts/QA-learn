@@ -16,7 +16,7 @@ public class Main {
     int monthNumb1 = 0;
     int monthNumb2 = 0;
     
-      do { 
+      while (monthPercent<30) { 
       monthNumb1 ++;
       monthPercent = vklad*0.02;
       vklad = 1.02*vklad;
@@ -28,8 +28,7 @@ public class Main {
       monthNumb2 ++;
       }
     }
-    while (monthPercent<30);
-    
+  
     System.out.printf("1. Величина ежемесячного увеличения вклада превысит 30 руб. в %d месяце\n", monthNumb1);
     System.out.printf("2. Размер вклада превысит 1200 руб. в %d месяце\n ", monthNumb2+1);
       }
