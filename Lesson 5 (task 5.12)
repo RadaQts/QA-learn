@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      
+    System.out.println ("Задача 5.12");
+    /* Гражданин 1 марта открыл счет в банке, вложив 1000 рублей.
+    Через каждый месяц размер вклада увеличивается на 2% от имеющейся суммы. 
+    Определить:
+    1. За какой месяц величина ежемесячного увеличения вклада превысит 30 руб.
+    2. Через сколько месяцев размер вклада превысит 1200 руб.*/
+    
+   
+    double vklad = 1000;
+    double monthPercent=0.02;
+    int monthNumb1 = 0;
+    int monthNumb2 = 0;
+    
+      do { 
+      monthNumb1 ++;
+      monthPercent = vklad*0.02;
+      vklad = 1.02*vklad;
+      System.out.printf("Месяц: %d\n", monthNumb1); //test start
+      System.out.printf("Переучтенный вклад: %f\n", vklad);
+      System.out.printf("Сумма процента в этом месяце: %f\n", monthPercent);
+      System.out.println("+++++++++"); //test end
+      if (vklad<=1200){   // считает, сколько месяцев вклад не превышает 1200
+      monthNumb2 ++;
+      }
+    }
+    while (monthPercent<30);
+    
+    System.out.printf("1. Величина ежемесячного увеличения вклада превысит 30 руб. в %d месяце\n", monthNumb1);
+    System.out.printf("2. Размер вклада превысит 1200 руб. в %d месяце\n ", monthNumb2+1);
+      }
+}
