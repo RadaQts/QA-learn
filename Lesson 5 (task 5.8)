@@ -1,0 +1,110 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      
+    System.out.println ("Задача 5.8");
+    /* Дано натуральное число. Определить 
+    1. Количество цифр 3 в нем
+    2. Сколько раз в нем встречается последняя цифра
+    3. Количество четных цифр в нем
+    4. Сумму его цифр, больших пяти
+    5. Произведение его цифр, больших семи
+    6. Сколько раз в нем встречаются цифры 0 и 5 (всего)*/
+    
+      int number = 805735;
+      int originalNumber = number;
+      int number1 = number;
+     /*1*/
+      int countOfThree = 0;
+      while(number1 != 0 ) {
+        int lastDigit = number1 % 10;
+        
+        if(lastDigit == 3) {
+          countOfThree++;
+        }
+        
+        number1 = number1 / 10;
+      }
+      System.out.printf("1. Число %d содержит цифру 3 %d раз\n", originalNumber, countOfThree);
+      
+      /*2*/
+      int number2 = number;
+      int lastDigitOrig = number % 10;
+      int countOfLast = 0;
+      while(number2 != 0 ) {
+        int lastDigit = number2 % 10;
+        
+        if(lastDigit == lastDigitOrig) {
+          countOfLast++;
+        }
+        
+        number2 = number2 / 10;
+      }
+      System.out.printf("2. Число %d содержит последнюю цифру %d раз\n", originalNumber, countOfLast);
+      
+      /*3*/
+      int number3 = number;
+      int countOfEven = 0;
+      while(number3 != 0 ) {
+        int lastDigit = number3 % 10;
+        
+        if(lastDigit % 2 == 0) {
+          countOfEven++;
+        }
+        
+        number3 = number3 / 10;
+      }
+      System.out.printf("3. Число %d содержит %d четных цифр\n", originalNumber, countOfEven);
+      
+      /*4*/
+      int number4 = number;
+      int sum = 0;
+      while(number4 != 0 ) {
+        int lastDigit = number4 % 10;
+        
+        if(lastDigit>5) {
+          sum=sum+lastDigit;
+        }
+        
+        number4 = number4 / 10;
+      }
+      if (sum>0) 
+        System.out.println("4. Сумма цифр, больших пяти = " + sum);
+      else 
+          System.out.println ("4. Нет цифр, больших пяти!");
+
+      
+      /*5*/
+      int number5 = number;
+      int compos = 1;
+      while(number5 != 0 ) {
+        int lastDigit = number5 % 10;
+        
+        if(lastDigit>7) {
+          compos=compos*lastDigit;
+        }
+        
+        number5 = number5 / 10;
+      }
+      if (compos>1) 
+        System.out.println("5. Произведение цифр, больших семи = " + compos);
+      else 
+          System.out.println ("5. Нет цифр, больших семи!");
+      
+      /*6*/
+      int number6 = number;
+      int countOfNF = 0;
+      while(number6 != 0 ) {
+        int lastDigit = number6 % 10;
+        
+        if((lastDigit==0)|(lastDigit==5)) {
+          countOfNF++;
+        }
+        
+        number6 = number6 / 10;
+      }
+      System.out.printf("6. Цифры 5 и 0 встретились %d раз", countOfNF);
+      
+  }
+}
